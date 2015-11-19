@@ -208,6 +208,11 @@ var FixedDataTable = React.createClass({
     onContentHeightChange: PropTypes.func,
 
     /**
+     * Callback that is called when a contextmenu event happens on a row.
+     */
+    onRowContextMenu: PropTypes.func,
+
+    /**
      * Callback that is called when a row is clicked.
      */
     onRowClick: PropTypes.func,
@@ -592,6 +597,7 @@ var FixedDataTable = React.createClass({
         fixedColumns={state.bodyFixedColumns}
         height={state.bodyHeight}
         offsetTop={offsetTop}
+        onRowContextMenu={state.onRowContextMenu}
         onRowClick={state.onRowClick}
         onRowDoubleClick={state.onRowDoubleClick}
         onRowMouseDown={state.onRowMouseDown}

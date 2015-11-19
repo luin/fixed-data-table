@@ -133,6 +133,7 @@ var FixedDataTableRowImpl = React.createClass({
     return (
       <div
         className={joinClasses(className, this.props.className)}
+        onContextMenu={this.props.onContextMenu ? this._onContextMenu : null}
         onClick={this.props.onClick ? this._onClick : null}
         onDoubleClick={this.props.onDoubleClick ? this._onDoubleClick : null}
         onMouseDown={this.props.onMouseDown ? this._onMouseDown : null}
@@ -170,6 +171,10 @@ var FixedDataTableRowImpl = React.createClass({
       };
       return <div className={className} style={style} />;
     }
+  },
+
+  _onContextMenu(/*object*/ event) {
+    this.props.onContextMenu(event, this.props.index);
   },
 
   _onClick(/*object*/ event) {

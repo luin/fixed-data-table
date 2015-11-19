@@ -260,6 +260,11 @@ var TransitionTable = React.createClass({
     onContentHeightChange: PropTypes.func,
 
     /**
+     * Callback that is called when a contextmenu event happens on a row.
+     */
+    onRowContextMenu: PropTypes.func,
+
+    /**
      * Callback that is called when a row is clicked.
      */
     onRowClick: PropTypes.func,
@@ -547,6 +552,7 @@ var TransitionTable = React.createClass({
       <Table
         {...props}
         onRowMouseDown={this._onRowAction(props, props.onRowMouseDown)}
+        onRowContextMenu={this._onRowAction(props, props.onRowContextMenu)}
         onRowClick={this._onRowAction(props, props.onRowClick)}
         onRowDoubleClick={this._onRowAction(props, props.onRowDoubleClick)}
         onRowMouseEnter={this._onRowAction(props, props.onRowMouseEnter)}
