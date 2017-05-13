@@ -1,6 +1,6 @@
 {
-  "name": "fixed-data-table",
-  "version": "0.6.4",
+  "name": "fixed-data-table-contextmenu",
+  "version": "1.6.4",
   "description": "A React table component designed to allow presenting thousands of rows of data.",
   "main": "main.js",
   "peerDependencies": {
